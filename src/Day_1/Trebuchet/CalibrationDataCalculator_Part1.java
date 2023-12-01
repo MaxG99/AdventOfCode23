@@ -29,9 +29,9 @@ public class CalibrationDataCalculator_Part1 {
             result += lastMatch;
         }
 
-        System.out.println(String.format("Result was: %s", result));
+        System.out.printf("Result was: %s%n", result);
         long end = System.currentTimeMillis();
-        System.out.println(String.format("Calculation took %d Milliseconds",(end - start)));
+        System.out.printf("Calculation took %d Milliseconds%n",(end - start));
         in.close();
     }
 }
