@@ -2,6 +2,9 @@ package Day_2;
 
 import Day_2.model.CubeInfo;
 import Day_2.model.Game;
+import lombok.Getter;
+import lombok.Setter;
+import utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,9 +12,17 @@ import java.io.IOException;
 import java.util.*;
 
 public class Part1 {
+    @Setter
+    @Getter
+    BufferedReader br;
+
     public static void main(String[] args) throws IOException {
-        FileReader in = new FileReader("src/Day_2/input.txt");
-        BufferedReader br = new BufferedReader(in);
+        Part1 part1 = new Part1();
+        part1.setBr(Utils.getBufferedReaderForInput(part1));
+        part1.run();
+    }
+
+    public int run() throws IOException {
         long start = System.currentTimeMillis();
         String line;
 
@@ -62,6 +73,7 @@ public class Part1 {
         System.out.printf("Result was: %s%n", sumPossibleGameIDs);
         long end = System.currentTimeMillis();
         System.out.printf("Calculation took %d Milliseconds%n", (end - start));
-        in.close();
+        br.close();
+        return sumPossibleGameIDs;
     }
 }

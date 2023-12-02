@@ -1,15 +1,15 @@
-package Day_1.Trebuchet;
+package Day_1;
+
+import utils.Utils;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CalibrationDataCalculator_Part1 {
     public static void main(String[] args) throws IOException {
-        FileReader in = new FileReader("src/Day_1/Trebuchet/input.txt");
-        BufferedReader br = new BufferedReader(in);
+        BufferedReader br = Utils.getBufferedReaderForInput(new CalibrationDataCalculator_Part1());
         long start = System.currentTimeMillis();
         Pattern numberPattern = Pattern.compile("(\\d)");
         String line;
@@ -32,6 +32,6 @@ public class CalibrationDataCalculator_Part1 {
         System.out.printf("Result was: %s%n", result);
         long end = System.currentTimeMillis();
         System.out.printf("Calculation took %d Milliseconds%n",(end - start));
-        in.close();
+        br.close();
     }
 }

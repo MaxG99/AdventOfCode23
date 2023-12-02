@@ -2,6 +2,9 @@ package Day_2;
 
 import Day_2.model.CubeInfo;
 import Day_2.model.Game;
+import lombok.Getter;
+import lombok.Setter;
+import utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,9 +13,17 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Part2 {
+    @Setter
+    @Getter
+    BufferedReader br;
+
     public static void main(String[] args) throws IOException {
-        FileReader in = new FileReader("src/Day_2/input.txt");
-        BufferedReader br = new BufferedReader(in);
+        Part2 part2 = new Part2();
+        part2.setBr(Utils.getBufferedReaderForInput(part2));
+        part2.run();
+    }
+
+    public int run() throws IOException {
         long start = System.currentTimeMillis();
         String line;
 
@@ -61,6 +72,7 @@ public class Part2 {
         System.out.printf("Result was: %s%n", sumPower);
         long end = System.currentTimeMillis();
         System.out.printf("Calculation took %d Milliseconds%n", (end - start));
-        in.close();
+        br.close();
+        return sumPower;
     }
 }
