@@ -3,6 +3,7 @@ package utils;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.nio.file.Path;
 
 public class Utils {
     public static BufferedReader getBufferedReaderForInput(Object a) throws FileNotFoundException {
@@ -13,5 +14,13 @@ public class Utils {
     public static BufferedReader getBufferedReaderForTest(Object a) throws FileNotFoundException {
         FileReader in = new FileReader("./src/test/java/"+a.getClass().getPackage().getName()+ "/" + a.getClass().getSimpleName()+"input.txt");
         return new BufferedReader(in);
+    }
+
+    public static Path getPathToFile(Object a) {
+        return Path.of("./src/main/java/" + a.getClass().getPackage().getName() + "/input.txt");
+    }
+
+    public static Path getPathToTestFile(Object a) {
+        return Path.of("./src/test/java/"+a.getClass().getPackage().getName()+ "/" + a.getClass().getSimpleName()+"input.txt");
     }
 }

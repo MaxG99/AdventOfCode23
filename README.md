@@ -1,10 +1,11 @@
-# AdventOfCode23
-my solution for the https://adventofcode.com/2023 challenges
+#           🎅
+# 🎄🦌🦌🦌🛷🎄
+my solution for the [☃️Advent of Code☃️](https://adventofcode.com/2023) challenges
 |Day|Part 1|Part 2||
 |:--|:-:|:-:|:--|
 |[Day 1](https://adventofcode.com/2023/day/1)|[👁️](https://github.com/MaxG99/AdventOfCode23/blob/main/src/main/java/Day_1/CalibrationDataCalculator_Part1.java)|[👁️](https://github.com/MaxG99/AdventOfCode23/blob/main/src/main/java/Day_1/CalibrationDataCalculator_Part2.java)| to the sky 🚀
 |[Day 2](https://adventofcode.com/2023/day/2)|[👁️](https://github.com/MaxG99/AdventOfCode23/blob/main/src/main/java/Day_2/Part1.java)|[👁️](https://github.com/MaxG99/AdventOfCode23/blob/main/src/main/java/Day_2/Part2.java)| bag of cubes 🟥🟩🟦
-|[Day 3](-https://adventofcode.com/2023/day/3)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_3/Part1.java)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_3/Part2.java)|
+|[Day 3](https://adventofcode.com/2023/day/3)|[👁️](https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_3/Part1.java)|[👁️](https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_3/Part2.java)| gears ... easy, right? ⚙️
 |[Day 4](-https://adventofcode.com/2023/day/4)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_4/Part1.java)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_4/Part2.java)|
 |[Day 5](-https://adventofcode.com/2023/day/5)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_5/Part1.java)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_5/Part2.java)|
 |[Day 6](-https://adventofcode.com/2023/day/6)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_6/Part1.java)|[👁️](-https://github.com/MaxG99/AdventOfCode23/tree/main/src/main/java/Day_6/Part2.java)|
