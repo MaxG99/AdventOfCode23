@@ -16,11 +16,11 @@ class Part1Test {
 
     @BeforeAll
     static void setup() throws FileNotFoundException {
-        part1.setBr(Utils.getBufferedReaderForTest(new Part1Test()));
+        part1.setPath(Utils.getPathToTestFile(new Part1Test()));
     }
 
     @Test
     void run() throws IOException {
-        Assertions.assertEquals(0, part1.run());
+        Assertions.assertEquals(35, part1.run());
     }
 }

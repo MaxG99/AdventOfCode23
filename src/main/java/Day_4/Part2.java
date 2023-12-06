@@ -31,9 +31,8 @@ public class Part2 {
 
         for (int i = 0; i < lines.size(); i++) {
             String[] winningOwn = lines.get(i).split(":")[1].trim().split("\\|");
-            List<Integer> winning = Arrays.stream(winningOwn[0].trim().split("\\s+")).map(string -> Integer.parseInt(string.trim())).collect(Collectors.toList());
-            List<Integer> own = Arrays.stream(winningOwn[1].trim().split("\\s+")).map(string -> Integer.parseInt(string)).collect(Collectors.toList());
-
+            List<Integer> winning = Utils.getNumbersFromString(winningOwn[0]);
+            List<Integer> own = Utils.getNumbersFromString(winningOwn[1]);
             long hits = own.stream().filter(integer -> winning.contains(integer)).count();
 
             result += 1 + recursiveLottery(lines, i, hits);

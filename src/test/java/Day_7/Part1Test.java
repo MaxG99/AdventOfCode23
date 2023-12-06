@@ -2,7 +2,7 @@ package Day_7;
 
 
 
-import Day_5.Part1;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 class Part1Test {
 
-    static Day_5.Part1 part1 = new Part1();
+    static Part1 part1 = new Part1();
 
     @BeforeAll
     static void setup() throws FileNotFoundException {

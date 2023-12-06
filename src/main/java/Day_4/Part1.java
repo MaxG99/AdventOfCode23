@@ -30,11 +30,13 @@ public class Part1 {
 
         while ((line = br.readLine()) != null) {
             String[] winningOwn = line.split(":")[1].trim().split("\\|");
-            List<Integer> winning = Arrays.stream(winningOwn[0].trim().split("\\s+")).map(string -> Integer.parseInt(string.trim())).collect(Collectors.toList());
-            List<Integer> own = Arrays.stream(winningOwn[1].trim().split("\\s+")).map(string -> Integer.parseInt(string)).collect(Collectors.toList());
-            long hits = own.stream().filter(integer -> winning.contains(integer)).count();
+            List<Integer> winning = Utils.getNumbersFromString(winningOwn[0]);
+            List<Integer> own = Utils.getNumbersFromString(winningOwn[1]);
+            long hits = own.stream()
+                    .filter(winning::contains)
+                    .count();
 
-            result += hits > 0 ? 1 << hits -1 : 0;
+            result += hits > 0 ? 1 << hits - 1 : 0;
 
         }
 
