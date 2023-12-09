@@ -81,7 +81,6 @@ public class Part2 {
             case "A": return 14;
             case "K": return 13;
             case "Q": return 12;
-            case "J": return 11;
             case "T": return 10;
             case "9": return 9;
             case "8": return 8;
@@ -91,16 +90,32 @@ public class Part2 {
             case "4": return 4;
             case "3": return 3;
             case "2": return 2;
+            case "J": return 1;
             default: return 0;
         }
     }
 
     private HashMap<String, Integer> getCardCountMap(String hand) {
         HashMap<String, Integer> cardCount = new HashMap<>();
+        int jokerCount = 0;
 
         for (String card : hand.split("")) {
+            if (card.equals("J")) {
+                jokerCount++;
+                continue;
+            }
             cardCount.merge(card, 1, (integer, integer2) -> integer + 1);
         }
+
+        if (jokerCount == 5) {
+            cardCount.put("J", 5);
+            return cardCount;
+        }
+
+        List<String> sorted = cardCount.keySet().stream().sorted(Comparator.comparing(cardCount::get).reversed()).toList();
+
+        int finalJokerCount = jokerCount;
+        cardCount.merge(sorted.get(0), 1, (integer, integer2) -> integer + finalJokerCount);
         return cardCount;
     }
 }
