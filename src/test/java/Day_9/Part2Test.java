@@ -20,6 +20,6 @@ class Part2Test {
 
     @Test
     void run() throws IOException {
-        Assertions.assertEquals(0, part2.run());
+        Assertions.assertEquals(2, part2.run());
     }
 }
