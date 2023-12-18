@@ -5,15 +5,15 @@ import lombok.Setter;
 import utils.Utils;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.nio.file.Path;
 
 public class Part2 {
-    @Setter
-    @Getter
-    BufferedReader br;
+    @Setter@Getter
+    Path path;
 
     public static void main(String[] args) throws IOException {
         Part2 part2 = new Part2();
-        part2.setBr(Utils.getBufferedReaderForInput(part2));
+        part2.setPath(Utils.getPathToFile(part2));
         part2.run();
     }
 
@@ -23,14 +23,10 @@ public class Part2 {
 
         int result = 0;
 
-        while ((line = br.readLine()) != null) {
-            //TODO: processing
-        }
 
         System.out.printf("Result was: %s%n", result);
         long end = System.currentTimeMillis();
         System.out.printf("Calculation took %d Milliseconds%n",(end - start));
-        br.close();
         return result;
     }
 }

@@ -14,7 +14,7 @@ class Part2Test {
 
     @BeforeAll
     static void setup() throws FileNotFoundException {
-        part2.setBr(Utils.getBufferedReaderForTest(new Part2Test()));
+        part2.setPath(Utils.getPathToTestFile(new Part2Test()));
     }
 
     @Test
