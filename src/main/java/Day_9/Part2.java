@@ -36,9 +36,9 @@ public class Part2 {
             for (int i = predictionArrayList.size()-1; i > 0; i--) {
                 Integer[] cur = predictionArrayList.get(i);
                 Integer[] prev = predictionArrayList.get(i-1);
-                prev[prev.length-1] = prev[prev.length-2] + cur[cur.length-1];
+                prev[0] = prev[1] - cur[0];
             }
-            nextNumber = predictionArrayList.get(0)[predictionArrayList.get(0).length-1];
+            nextNumber = predictionArrayList.get(0)[0];
             result += nextNumber;
 
         }
@@ -53,8 +53,11 @@ public class Part2 {
     private static void addPaddingWithZero(ArrayList<Integer[]> predictionArrayList) {
         for (int i = 0; i < predictionArrayList.size(); i++) {
             Integer[] integers = predictionArrayList.get(i);
-            Integer[] padded = Arrays.copyOf(integers, integers.length +1);
-            padded[padded.length-1] = 0;
+            Integer[] padded = new Integer[integers.length+1];
+            for (int oldIndex = 0; oldIndex < integers.length; oldIndex++) {
+                padded[oldIndex+1] = integers[oldIndex];
+            }
+            padded[0] = 0;
             predictionArrayList.set(i, padded);
         }
     }
